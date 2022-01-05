@@ -1,4 +1,4 @@
-name: Build app
+name: Build
 
 on:
   workflow_dispatch:
@@ -25,6 +25,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ steps.branch.outputs.current_branch }}
+          tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
           build-args: |
             SOURCE=https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}
