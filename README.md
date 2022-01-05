@@ -1,8 +1,8 @@
 ```sh
-docker run --rm -e API_KEY=api_key \
+docker run --rm -e API_KEY=$API_KEY \
   ghcr.io/febalist/pusher channels apps trigger \
-  --app-id app_id \
-  --channel channel_name \
-  --event event_name \
-  --message message
+  --app-id $APP_ID \
+  --channel $CHANNEL_NAME \
+  --event $EVENT_NAME \
+  --message $MESSAGE
 ```
